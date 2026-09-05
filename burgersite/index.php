@@ -179,18 +179,6 @@
                     Burgers
                 </button>
 
-                <button>
-                    Sides
-                </button>
-
-                <button>
-                    Shakes
-                </button>
-
-                <button>
-                    Featured
-                </button>
-
             </div>
 
 
@@ -638,7 +626,7 @@
                     <div class="footer-logo">
 
                         <img
-                            src="burgerlogo.png"
+                            src="burger_logo.png"
                             alt="Burger Queen Logo">
 
                     </div>
@@ -666,25 +654,37 @@
 
                         <li>
                             <a href="#">
-                                Burgers
+                                The Crown Classics
                             </a>
                         </li>
 
                         <li>
                             <a href="#">
-                                Sides
+                                Queen's Double Stack
                             </a>
                         </li>
 
                         <li>
                             <a href="#">
-                                Shakes
+                                Royal Smash
                             </a>
                         </li>
 
                         <li>
                             <a href="#">
-                                Featured Meals
+                                Spicy Sovereign
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Gold BBQ Melt
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Truffle Royale
                             </a>
                         </li>
 

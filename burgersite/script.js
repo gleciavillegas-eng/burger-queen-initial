@@ -641,7 +641,7 @@ function renderReceipt(modal, order) {
     <div id="bq-print-area" style="font-family:'Courier New',monospace;color:#241512;">
 
       <div style="text-align:center;margin-bottom:14px;">
-        <div style="font-size:28px;">👑</div>
+        <div style="font-size:29px;">/div>
         <div style="font-family:'Fraunces',serif;font-weight:700;font-size:20px;color:#5A1E24;margin-top:4px;">Burger Queen</div>
         <div style="font-size:11.5px;color:#6b4b41;">Long Live The Burger</div>
       </div>
@@ -671,7 +671,7 @@ function renderReceipt(modal, order) {
 
       <div style="text-align:center;margin-top:18px;font-size:11.5px;color:#6b4b41;border-top:1px dashed #5A1E24;padding-top:12px;">
         Ready for pickup in ~15–20 minutes.<br>
-        Thank you for choosing Burger Queen — long live the burger. 👑
+        Thank you for choosing Burger Queen — long live the burger. 
       </div>
     </div>
 

@@ -191,7 +191,7 @@ header {
 
 .nav-logo {
     width: 170px;
-    height: 75px;
+    height: 70px;
     object-fit: contain;
     display: block;
     margin-bottom:20px;
@@ -383,7 +383,7 @@ header {
 
     background: var(--wine);
 
-    border-radius: 20px;
+    border-radius: 25px 25px;
 
     display: grid;
 
