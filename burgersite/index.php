@@ -31,11 +31,11 @@
 
             <!-- NAVIGATION -->
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
+                <li><a href="Home.php" class="active"S>Home</a></li>
+                <li><a href="#club">Royal Club</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#story">Our Story</a></li>
                 <li><a href="#">Join Our Team</a></li>
-                <li><a href="#club">Royal Club</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
 
@@ -54,7 +54,7 @@
 
             <div class="hero-copy">
 
-                <span class="eyebrow">
+                <span class="eyebrow" style="font-size: 1.3rem;">
                     THE CORONATION BURGER
                 </span>
 
@@ -123,20 +123,20 @@
             <div class="club-banner-copy">
 
                 <span class="eyebrow">
-                    👑
+                    <img src="burger_logo.png" alt="Burger Queen Logo"style="max-width: 77.5%; height: auto; margin:0 0 50px;">
                 </span>
 
-                <h3>
+                <h3 style="font-size: 2.1rem; margin: -20px 0 0 30px;">
                     Join The Royal Club
                 </h3>
 
-                <p>
+                <p style="margin: 0 0 0 30px;">
                     Earn points on every order, unlock exclusive
                     deals, and get early access to new menu drops.
                     Royalty has its privileges.
                 </p>
 
-                <a href="#" class="btn btn-gold">
+                <a href="#" class="btn btn-gold" style="margin: 20px 0 0 30px;">
                     Join Club
                 </a>
 
@@ -177,6 +177,12 @@
 
                 <button class="active">
                     Burgers
+                </button>   
+                <button class="active">
+                    Sides
+                </button>
+                <button class="active">
+                    Shakes
                 </button>
 
             </div>
@@ -269,6 +275,113 @@
 
     </section>
 
+                    <!-- SIDES -->
+
+                <div class="product-card" data-category="sides">
+
+                    <img
+                        src="side_1.png"
+                        alt="Royal Crown Fries">
+
+                    <span class="tag">
+                        Royal Crown Fries
+                    </span>
+
+                </div>
+
+
+                <div class="product-card" data-category="sides">
+
+                    <img
+                        src="side_2.png"
+                        alt="Golden Onion Rings">
+
+                    <span class="tag">
+                        Golden Onion Rings
+                    </span>
+
+                </div>
+
+
+                <div class="product-card" data-category="sides">
+
+                    <img
+                        src="side_3.png"
+                        alt="Cheese Throne Bites">
+
+                    <span class="tag">
+                        Cheese Throne Bites
+                    </span>
+
+                </div>
+
+
+                <div class="product-card" data-category="sides">
+
+                    <img
+                        src="side_4.png"
+                        alt="Truffle Parmesan Fries">
+
+                    <span class="tag">
+                        Truffle Parmesan Fries
+                    </span>
+
+                </div>
+
+
+                <!-- SHAKES -->
+
+                <div class="product-card" data-category="shakes">
+
+                    <img
+                        src="shake_1.png"
+                        alt="Royal Vanilla Shake">
+
+                    <span class="tag">
+                        Royal Vanilla Shake
+                    </span>
+
+                </div>
+
+
+                <div class="product-card" data-category="shakes">
+
+                    <img
+                        src="shake_2.png"
+                        alt="Crown Chocolate Shake">
+
+                    <span class="tag">
+                        Crown Chocolate Shake
+                    </span>
+
+                </div>
+
+
+                <div class="product-card" data-category="shakes">
+
+                    <img
+                        src="shake_3.png"
+                        alt="Gold Caramel Shake">
+
+                    <span class="tag">
+                        Gold Caramel Shake
+                    </span>
+
+                </div>
+
+
+                <div class="product-card" data-category="shakes">
+
+                    <img
+                        src="shake_4.png"
+                        alt="Berry Sovereign Shake">
+
+                    <span class="tag">
+                        Berry Sovereign Shake
+                    </span>
+
+                </div>
+
 
     <!-- ================= ABOUT ================= -->
 
@@ -278,7 +391,7 @@
 
             <div class="about-copy">
 
-                <span class="eyebrow">
+                <span class="eyebrow" style="font-size: 1.4rem;">
                     OUR STORY
                 </span>
 
@@ -286,7 +399,7 @@
                     About Burger Queen
                 </h2>
 
-                <p>
+                <p style="font-size:1.1rem;">
                     Founded in 2019 out of a deep frustration with
                     mediocre burgers, Burger Queen was built on a
                     single promise: every bite should feel like a
@@ -582,7 +695,7 @@
                 items, and get rewarded like the royalty you are.
             </p>
 
-            <a href="#" class="btn btn-gold">
+            <a href="#" class="btn btn-gold" style=" margin: 0 0 0 130px;">
                 Get The App
             </a>
 
@@ -601,7 +714,7 @@
                 market.
             </p>
 
-            <a href="#" class="btn btn-outline">
+            <a href="#" class="btn btn-outline" style=" margin: 0 0 0 130px;">
                 Buy A Franchise
             </a>
 
@@ -654,37 +767,19 @@
 
                         <li>
                             <a href="#">
-                                The Crown Classics
+                                Burgers
                             </a>
                         </li>
 
                         <li>
                             <a href="#">
-                                Queen's Double Stack
+                                Sides
                             </a>
                         </li>
 
                         <li>
                             <a href="#">
-                                Royal Smash
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                Spicy Sovereign
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                Gold BBQ Melt
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                Truffle Royale
+                                Shakes
                             </a>
                         </li>
 

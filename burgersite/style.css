@@ -216,6 +216,7 @@ header {
 
 
 .nav-links a {
+    position: relative;
     opacity: .9;
 
     transition:
@@ -223,13 +224,57 @@ header {
         color .15s ease;
 }
 
+.nav-links a::after {
+    content: '';
 
-.nav-links a:hover {
-    opacity: 1;
-    color: var(--gold);
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: var(--gold);
+
+    transition:
+        width .3s ease,
+        left .3s ease;
 }
 
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+    left: 0;
+    background: var(--gold);
+    opacity: .9;
+    border-radius: 40px 40px;
+    padding: 0 0 0 10px;
+    margin: 0 0 0 -5px;
+    height:30px;
+    z-index:-1;
+}
 
+.nav-links a.active {
+    background-color: transparent;
+    color: var(--wine);
+    font-weight: 700;
+
+    animation: nav-active-pop .35s ease;
+}
+
+@keyframes nav-active-pop {
+    0% {
+        transform: translateY(2px);
+        opacity: .6;
+    }
+    60% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 /* ORDER BUTTON */
 
 .nav-cta {
@@ -291,7 +336,7 @@ header {
 
 
 .hero-copy h1 {
-    font-size: 56px;
+    font-size: 80px;
 
     color: var(--cream-light);
 
@@ -401,7 +446,7 @@ header {
 
     object-fit: cover;
 
-    min-height: 200px;
+    min-height: 100px;
 }
 
 
@@ -463,8 +508,9 @@ header {
 
 .section-head .eyebrow {
     display: block;
-
+    margin-top:-50px;
     margin-bottom: 10px;
+    font-size: 14px;
 }
 
 
@@ -473,7 +519,7 @@ header {
 
     color: var(--wine);
 
-    margin-bottom: 12px;
+    margin-bottom: 40px;
 }
 
 
@@ -512,7 +558,7 @@ header {
 
     border-radius: 30px;
 
-    font-size: 13.5px;
+    font-size: 1.0rem;
 
     font-weight: 600;
 
@@ -611,7 +657,7 @@ header {
 
 .about-img img {
     border-radius: 20px;
-
+    
     width: 100%;
 
     height: 380px;
@@ -628,7 +674,7 @@ header {
 
 
 .about-copy h2 {
-    font-size: 36px;
+    font-size: 40px;
 
     color: var(--wine);
 
@@ -639,7 +685,7 @@ header {
 .about-copy p {
     color: #7D1F20;
 
-    font-size: 15px;
+    font-size:1.1rem;
 
     margin-bottom: 16px;
 
@@ -649,6 +695,7 @@ header {
 
 .about-copy .btn {
     margin-top: 14px;
+    font-size:1.0rem;
 }
 
 
@@ -925,7 +972,6 @@ header {
 
 .cta-panel {
     padding: 80px 60px;
-
     color: var(--cream-light);
 
     background-color: #7D1F20;
@@ -938,8 +984,8 @@ header {
 
 
 .cta-panel h3 {
-    font-size: 30px;
-
+    font-size: 35px;
+    margin: 0 0 0 130px;
     color: var(--white);
 
     margin-bottom: 14px;
@@ -948,8 +994,8 @@ header {
 
 .cta-panel p {
     color: #D9BCAC;
-
-    font-size: 14.5px;
+     margin: 0 0 0 130px;
+    font-size: 15.5px;
 
     max-width: 340px;
 

@@ -138,11 +138,27 @@ function initProductFilter() {
   const grid = document.querySelector('.product-grid');
   if (!buttons.length || !grid) return;
 
-  const emptyMsg = document.createElement('p');
-  emptyMsg.textContent = 'New items coming soon to this category — check back soon!';
-  emptyMsg.style.cssText =
-    'grid-column:1/-1;text-align:center;padding:50px 0;color:#6b4b41;font-size:15px;display:none;';
-  grid.appendChild(emptyMsg);
+  const PRODUCTS = [
+  // Burgers
+  { id: 'crown-classic',        name: 'The Crown Classic',       price: 8.99 },
+  { id: 'double-stack',         name: "Queen's Double Stack",    price: 10.49 },
+  { id: 'royal-smash',          name: 'Royal Smash',             price: 9.49 },
+  { id: 'spicy-sovereign',      name: 'Spicy Sovereign',         price: 9.99 },
+  { id: 'gold-bbq-melt',        name: 'Gold BBQ Melt',           price: 10.99 },
+  { id: 'truffle-royale',       name: 'Truffle Royale',          price: 12.49 },
+
+  // Sides
+  { id: 'royal-crown-fries',    name: 'Royal Crown Fries',       price: 4.49 },
+  { id: 'golden-onion-rings',   name: 'Golden Onion Rings',      price: 4.99 },
+  { id: 'cheese-throne-bites',  name: 'Cheese Throne Bites',     price: 5.49 },
+  { id: 'truffle-parmesan-fries', name: 'Truffle Parmesan Fries', price: 6.49 },
+
+  // Shakes
+  { id: 'royal-vanilla-shake',   name: 'Royal Vanilla Shake',    price: 5.99 },
+  { id: 'crown-chocolate-shake', name: 'Crown Chocolate Shake',  price: 5.99 },
+  { id: 'gold-caramel-shake',    name: 'Gold Caramel Shake',     price: 6.49 },
+  { id: 'berry-sovereign-shake', name: 'Berry Sovereign Shake',  price: 6.49 }
+];
 
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
