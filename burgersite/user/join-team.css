@@ -1,0 +1,974 @@
+/* =====================================
+   VARIABLES
+===================================== */
+
+:root {
+    --red: #9d1118;
+    --dark-red: #65090e;
+
+    --gold: #d9a83e;
+    --cream: #f5ead5;
+
+    --black: #11100f;
+    --white: #fffaf0;
+
+    --gray: #686158;
+}
+
+
+/* =====================================
+   RESET
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--cream);
+    color: var(--black);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+.navbar {
+    height: 78px;
+
+    background: var(--black);
+    color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-family: 'Anton', sans-serif;
+
+    font-size: 24px;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+
+/* NAV LINKS */
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+nav a {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--gold);
+}
+
+
+/* MOBILE BUTTON */
+
+.menu-btn {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    padding: 5px;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.team-hero {
+    min-height: 650px;
+
+    padding: 90px 9%;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            120deg,
+            var(--dark-red),
+            var(--red)
+        );
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+.small-title {
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+
+/* HERO TITLE */
+
+.team-hero h1 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(65px, 9vw, 125px);
+
+    line-height: 0.87;
+}
+
+.team-hero h1 span {
+    color: var(--gold);
+}
+
+
+/* HERO TEXT */
+
+.hero-text {
+    max-width: 560px;
+
+    margin: 30px 0;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   PRIMARY BUTTON
+===================================== */
+
+.primary-btn {
+    border: none;
+
+    background: var(--gold);
+
+    color: var(--black);
+
+    padding: 16px 26px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =====================================
+   HERO CROWN
+===================================== */
+
+.hero-crown {
+    position: absolute;
+
+    right: 6%;
+
+    bottom: -90px;
+
+    font-size: 420px;
+
+    line-height: 1;
+
+    color: rgba(255, 255, 255, 0.07);
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+
+/* =====================================
+   HERO WAVE
+===================================== */
+
+.wave-divider {
+    position: absolute;
+
+    left: 0;
+
+    bottom: -1px;
+
+    width: 100%;
+
+    height: 85px;
+
+    line-height: 0;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+.wave-divider svg {
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+}
+
+
+/* =====================================
+   INTRODUCTION
+===================================== */
+
+.team-intro {
+    padding: 110px 9%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.intro-content h2 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(50px, 6vw, 80px);
+
+    line-height: 0.9;
+
+    margin-bottom: 30px;
+}
+
+.intro-content h2 span {
+    color: var(--red);
+}
+
+.intro-content > p:not(.small-title) {
+    max-width: 620px;
+
+    color: var(--gray);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+/* =====================================
+   INTRO CARD
+===================================== */
+
+.intro-card {
+    min-height: 470px;
+
+    background: var(--black);
+
+    color: white;
+
+    border: 2px solid var(--gold);
+
+    box-shadow:
+        20px 20px 0 var(--gold);
+
+    padding: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.card-crown {
+    color: var(--gold);
+
+    font-size: 70px;
+}
+
+.intro-card h3 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: 65px;
+
+    line-height: 0.85;
+
+    margin: 20px 0;
+}
+
+.intro-card p {
+    color: var(--gold);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+
+/* =====================================
+   BENEFITS
+===================================== */
+
+.benefits {
+    background: var(--black);
+
+    color: white;
+
+    padding: 110px 8%;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(50px, 6vw, 80px);
+
+    line-height: 0.9;
+}
+
+.section-heading h2 span {
+    color: var(--gold);
+}
+
+
+/* =====================================
+   BENEFIT GRID
+===================================== */
+
+.benefit-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.benefit-card {
+    background: #1d1b19;
+
+    padding: 35px 25px;
+
+    border-top: 4px solid var(--red);
+
+    transition: 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+
+    border-top-color: var(--gold);
+}
+
+.icon {
+    color: var(--gold);
+
+    font-size: 35px;
+
+    margin-bottom: 18px;
+}
+
+.benefit-card h3 {
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+.benefit-card p {
+    color: #aaa39a;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   JOBS
+===================================== */
+
+.jobs {
+    padding: 110px 9%;
+}
+
+.section-description {
+    color: var(--gray);
+
+    margin-top: 15px;
+}
+
+.job-container {
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+
+/* JOB CARD */
+
+.job-card {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 30px;
+
+    background: var(--white);
+
+    border-left: 5px solid var(--red);
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.job-card:hover {
+    transform: translateX(7px);
+
+    border-left-color: var(--gold);
+}
+
+.job-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+.job-number {
+    font-family: 'Anton', sans-serif;
+
+    font-size: 35px;
+
+    color: var(--gold);
+}
+
+.job-card h3 {
+    font-size: 16px;
+
+    letter-spacing: 1px;
+}
+
+.job-card p {
+    color: var(--gray);
+
+    font-size: 13px;
+
+    margin-top: 5px;
+}
+
+
+/* =====================================
+   APPLY BUTTON
+===================================== */
+
+.apply-btn {
+    border: none;
+
+    background: var(--red);
+
+    color: white;
+
+    padding: 13px 20px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.3s ease;
+}
+
+.apply-btn:hover {
+    background: var(--dark-red);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   APPLICATION
+===================================== */
+
+.application {
+    padding: 110px 10%;
+
+    background:
+        linear-gradient(
+            120deg,
+            var(--red),
+            var(--dark-red)
+        );
+
+    color: white;
+}
+
+.application h2 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(55px, 7vw, 90px);
+
+    line-height: 0.88;
+
+    margin-bottom: 30px;
+}
+
+.application h2 span {
+    color: var(--gold);
+}
+
+.application p:not(.small-title) {
+    max-width: 600px;
+
+    color: #eee;
+
+    margin-bottom: 30px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background: #0b0a09;
+
+    color: #aaa39a;
+
+    padding: 70px 8% 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+footer h4 {
+    color: var(--gold);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+footer a {
+    display: block;
+
+    font-size: 12px;
+
+    margin-bottom: 10px;
+
+    transition: 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--gold);
+}
+
+.footer-brand p {
+    margin-top: 12px;
+
+    font-size: 13px;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+
+    padding-top: 25px;
+
+    border-top:
+        1px solid #ffffff15;
+
+    font-size: 11px;
+}
+
+
+/* =====================================
+   NOTIFICATION
+===================================== */
+
+.notification {
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    background: var(--gold);
+
+    color: var(--black);
+
+    padding: 15px 22px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.3);
+
+    transform: translateY(120px);
+
+    transition: 0.4s ease;
+
+    z-index: 200;
+}
+
+.notification.show {
+    transform: translateY(0);
+}
+
+
+/* =====================================
+   JAVASCRIPT CARD ANIMATION
+===================================== */
+
+.animate-card {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.animate-card.reveal {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 9px;
+    }
+
+    .benefit-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .team-intro {
+        gap: 50px;
+    }
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        height: 70px;
+
+        padding: 0 7%;
+    }
+
+
+    /* MOBILE BUTTON */
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    /* MOBILE NAV */
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: var(--black);
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+
+    /* HERO */
+
+    .team-hero {
+        min-height: 600px;
+
+        padding: 70px 7%;
+    }
+
+    .team-hero h1 {
+        font-size: 65px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+    }
+
+    .hero-crown {
+        font-size: 250px;
+
+        right: -20px;
+    }
+
+
+    /* WAVE */
+
+    .wave-divider {
+        height: 65px;
+    }
+
+
+    /* INTRO */
+
+    .team-intro {
+        grid-template-columns: 1fr;
+
+        padding: 80px 7%;
+    }
+
+    .intro-card {
+        min-height: 380px;
+
+        box-shadow:
+            12px 12px 0 var(--gold);
+    }
+
+    .intro-card h3 {
+        font-size: 50px;
+    }
+
+
+    /* BENEFITS */
+
+    .benefit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits {
+        padding: 80px 7%;
+    }
+
+
+    /* JOBS */
+
+    .jobs {
+        padding: 80px 7%;
+    }
+
+    .job-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .job-info {
+        width: 100%;
+    }
+
+    .apply-btn {
+        width: 100%;
+    }
+
+
+    /* APPLICATION */
+
+    .application {
+        padding: 80px 7%;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        grid-template-columns:
+            1fr 1fr;
+
+        padding:
+            60px 7%;
+    }
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 450px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .copyright {
+        grid-column: auto;
+    }
+
+    .team-hero h1 {
+        font-size: 52px;
+    }
+
+    .intro-card h3 {
+        font-size: 43px;
+    }
+
+    .section-heading h2 {
+        font-size: 48px;
+    }
+
+    .job-info {
+        gap: 15px;
+    }
+
+    .job-number {
+        font-size: 28px;
+    }
+
+    .wave-divider {
+        height: 55px;
+    }
+}

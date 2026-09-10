@@ -1,0 +1,1326 @@
+/* =========================================
+   ROOT
+========================================= */
+
+:root {
+
+    --cream: #f8d7b8;
+    --burgundy: #741d1d;
+    --dark-burgundy: #5d1515;
+
+    --gold: #f2a900;
+
+    --white: #fffaf5;
+    --black: #171313;
+
+    --gray: #e8d8ca;
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+
+    background: var(--cream);
+
+    color: var(--black);
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+
+    height: 78px;
+
+    padding: 0 8%;
+
+    background: var(--cream);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    z-index: 1000;
+
+}
+
+
+.logo img {
+
+    width: 95px;
+
+    display: block;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 27px;
+
+}
+
+
+nav > a {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: .3s;
+
+}
+
+
+nav > a:hover,
+nav > a.active {
+
+    color: var(--burgundy);
+
+}
+
+
+/* =========================================
+   ORDER BUTTON
+========================================= */
+
+.order-btn {
+
+    background: var(--burgundy);
+
+    color: white !important;
+
+    padding: 11px 18px;
+
+    border-radius: 25px;
+
+    transition: .3s;
+
+}
+
+
+.order-btn:hover {
+
+    background: var(--dark-burgundy);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================
+   ACCOUNT
+========================================= */
+
+.account-container {
+
+    position: relative;
+
+}
+
+
+.account-btn {
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    cursor: pointer;
+
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+.profile-icon {
+
+    width: 31px;
+
+    height: 31px;
+
+    background: var(--burgundy);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 15px;
+
+}
+
+
+.account-name {
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+.dropdown-arrow {
+
+    font-size: 8px;
+
+    transition: .3s;
+
+}
+
+
+.account-btn.active .dropdown-arrow {
+
+    transform: rotate(180deg);
+
+}
+
+
+/* =========================================
+   ACCOUNT DROPDOWN
+========================================= */
+
+.account-dropdown {
+
+    position: absolute;
+
+    right: 0;
+
+    top: 48px;
+
+    width: 270px;
+
+    background: var(--white);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition: .25s;
+
+}
+
+
+.account-dropdown.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+
+.profile-header {
+
+    background: var(--burgundy);
+
+    padding: 20px;
+
+    color: white;
+
+    display: flex;
+
+    gap: 13px;
+
+    align-items: center;
+
+}
+
+
+.large-profile-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    background: var(--cream);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 23px;
+
+}
+
+
+.profile-details h3 {
+
+    font-size: 14px;
+
+}
+
+
+.profile-details p {
+
+    color: #f4cdb5;
+
+    font-size: 9px;
+
+    margin-top: 3px;
+
+}
+
+
+.dropdown-line {
+
+    height: 1px;
+
+    background: #eaded5;
+
+}
+
+
+.dropdown-item {
+
+    padding: 14px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    transition: .2s;
+
+}
+
+
+.dropdown-item:hover {
+
+    background: #f3e5d9;
+
+}
+
+
+.dropdown-item > span {
+
+    width: 34px;
+
+    height: 34px;
+
+    background: #f2dfd1;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.dropdown-item div {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.dropdown-item strong {
+
+    font-size: 11px;
+
+}
+
+
+.dropdown-item small {
+
+    font-size: 9px;
+
+    color: #777;
+
+}
+
+
+.logout-btn {
+
+    width: 100%;
+
+    padding: 15px 18px;
+
+    border: none;
+
+    background: white;
+
+    color: var(--burgundy);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.logout-btn:hover {
+
+    background: #f8dddd;
+
+}
+
+
+/* =========================================
+   MOBILE BUTTON
+========================================= */
+
+.menu-btn {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+
+    min-height: 640px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: var(--burgundy);
+
+    color: white;
+
+    padding: 72px 9% 100px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.hero-content {
+
+    width: 57%;
+
+    position: relative;
+
+    z-index: 3;
+
+}
+
+
+.hero-label {
+
+    color: var(--gold);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.hero h1 {
+
+    font-family: 'DM Serif Display', serif;
+
+    font-size: clamp(60px, 7vw, 100px);
+
+    line-height: .83;
+
+    letter-spacing: -2px;
+
+}
+
+
+.hero-description {
+
+    max-width: 680px;
+
+    margin-top: 20px;
+
+    font-size: 20px;
+
+    line-height: 1.3;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 17px;
+
+    margin-top: 60px;
+
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.primary-btn {
+
+    display: inline-block;
+
+    padding: 14px 22px;
+
+    background: var(--gold);
+
+    color: #111;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    border-radius: 25px;
+
+    transition: .3s;
+
+}
+
+
+.primary-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+
+}
+
+
+.secondary-btn {
+
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    border: 2px solid white;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+
+.secondary-btn:hover {
+
+    background: white;
+
+    color: var(--burgundy);
+
+}
+
+
+/* =========================================
+   BURGER IMAGE
+========================================= */
+
+.hero-image {
+
+    position: absolute;
+
+    right: -20px;
+
+    bottom: -20px;
+
+    width: 52%;
+
+    z-index: 2;
+
+}
+
+
+.hero-image img {
+
+    width: 100%;
+
+    display: block;
+
+    object-fit: contain;
+
+}
+
+
+/* =========================================
+   BOTTOM DECORATION
+========================================= */
+
+.bottom-shape {
+
+    position: absolute;
+
+    bottom: -1px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 75px;
+
+    background: var(--cream);
+
+    clip-path: polygon(
+        0 60%,
+        5% 80%,
+        11% 35%,
+        17% 85%,
+        24% 55%,
+        29% 85%,
+        36% 65%,
+        43% 90%,
+        50% 40%,
+        57% 78%,
+        63% 30%,
+        70% 82%,
+        77% 48%,
+        83% 86%,
+        90% 50%,
+        96% 85%,
+        100% 70%,
+        100% 100%,
+        0 100%
+    );
+
+    z-index: 5;
+
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.features {
+
+    padding: 100px 9%;
+
+    background: var(--cream);
+
+}
+
+
+.feature-heading {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+
+}
+
+
+.feature-heading > p {
+
+    color: var(--burgundy);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
+
+.feature-heading h2 {
+
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 65px;
+
+    line-height: .9;
+
+    margin-top: 12px;
+
+}
+
+
+.feature-heading h2 span {
+
+    color: var(--burgundy);
+
+}
+
+
+.feature-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 25px;
+
+}
+
+
+.feature-card {
+
+    background: var(--white);
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-bottom: 4px solid var(--burgundy);
+
+    transition: .3s;
+
+}
+
+
+.feature-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+.feature-icon {
+
+    font-size: 42px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.feature-card h3 {
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.feature-card p {
+
+    color: #6d625a;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   ROYAL CLUB
+========================================= */
+
+.club-banner {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 100px 10%;
+
+    background: var(--dark-burgundy);
+
+    color: white;
+
+}
+
+
+.club-content {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.club-content > p {
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.club-content h2 {
+
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 70px;
+
+    line-height: .9;
+
+}
+
+
+.club-content span {
+
+    display: inline-block;
+
+    margin: 25px 0;
+
+    color: #eadbd0;
+
+}
+
+
+.club-crown {
+
+    position: absolute;
+
+    right: 8%;
+
+    top: -80px;
+
+    font-size: 400px;
+
+    color: rgba(255,255,255,.06);
+
+}
+
+
+/* =========================================
+   ORDER SECTION
+========================================= */
+
+.order-section {
+
+    padding: 110px 9%;
+
+    text-align: center;
+
+    background: var(--cream);
+
+}
+
+
+.order-section h2 {
+
+    font-family: 'DM Serif Display', serif;
+
+    font-size: 70px;
+
+    line-height: .9;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background: #171313;
+
+    color: #aaa;
+
+    padding: 65px 8% 25px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 40px;
+
+}
+
+
+.footer-brand img {
+
+    width: 100px;
+
+}
+
+
+.footer-brand p {
+
+    font-size: 12px;
+
+    margin-top: 12px;
+
+}
+
+
+footer h4 {
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+
+}
+
+
+footer a {
+
+    display: block;
+
+    font-size: 11px;
+
+    margin-bottom: 9px;
+
+}
+
+
+footer a:hover {
+
+    color: white;
+
+}
+
+
+.copyright {
+
+    grid-column: 1 / -1;
+
+    border-top: 1px solid #ffffff18;
+
+    padding-top: 20px;
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================
+   LOGOUT MESSAGE
+========================================= */
+
+.logout-message {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    background: var(--burgundy);
+
+    color: white;
+
+    padding: 16px 23px;
+
+    border-left: 4px solid var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+
+    transform: translateY(100px);
+
+    opacity: 0;
+
+    transition: .3s;
+
+    z-index: 9999;
+
+}
+
+
+.logout-message.show {
+
+    transform: translateY(0);
+
+    opacity: 1;
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+
+        padding: 0 4%;
+
+    }
+
+
+    nav {
+
+        gap: 14px;
+
+    }
+
+
+    nav > a {
+
+        font-size: 10px;
+
+    }
+
+
+    .hero {
+
+        padding-left: 6%;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+
+        height: 70px;
+
+        padding: 0 6%;
+
+    }
+
+
+    .menu-btn {
+
+        display: block;
+
+    }
+
+
+    nav {
+
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: var(--cream);
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+
+        box-shadow: 0 10px 20px rgba(0,0,0,.15);
+
+    }
+
+
+    nav.open {
+
+        display: flex;
+
+    }
+
+
+    nav > a {
+
+        width: 100%;
+
+        font-size: 12px;
+
+    }
+
+
+    .order-btn {
+
+        width: auto !important;
+
+    }
+
+
+    .account-container {
+
+        width: 100%;
+
+    }
+
+
+    .account-btn {
+
+        width: 100%;
+
+        justify-content: flex-start;
+
+    }
+
+
+    .account-dropdown {
+
+        position: relative;
+
+        top: 5px;
+
+        width: 100%;
+
+    }
+
+
+    .hero {
+
+        min-height: 700px;
+
+        padding: 60px 7% 150px;
+
+        display: block;
+
+    }
+
+
+    .hero-content {
+
+        width: 100%;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 65px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 16px;
+
+        max-width: 500px;
+
+    }
+
+
+    .hero-buttons {
+
+        margin-top: 35px;
+
+    }
+
+
+    .hero-image {
+
+        width: 90%;
+
+        right: -10%;
+
+        bottom: 40px;
+
+    }
+
+
+    .feature-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .club-content h2 {
+
+        font-size: 55px;
+
+    }
+
+
+    .club-crown {
+
+        font-size: 250px;
+
+    }
+
+
+    footer {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .logo img {
+
+        width: 80px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 53px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 14px;
+
+    }
+
+
+    .hero-image {
+
+        width: 100%;
+
+        right: -15%;
+
+    }
+
+
+    .feature-heading h2 {
+
+        font-size: 48px;
+
+    }
+
+
+    .club-content h2 {
+
+        font-size: 45px;
+
+    }
+
+
+    .order-section h2 {
+
+        font-size: 48px;
+
+    }
+
+
+    footer {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .copyright {
+
+        grid-column: auto;
+
+    }
+
+}

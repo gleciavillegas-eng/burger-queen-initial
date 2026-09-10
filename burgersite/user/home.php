@@ -31,12 +31,12 @@
 
             <!-- NAVIGATION -->
             <ul class="nav-links">
-                <li><a href="Home.php" class="active"S>Home</a></li>
-                <li><a href="#club">Royal Club</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#story">Our Story</a></li>
-                <li><a href="#">Join Our Team</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="home.php" class="active">Home</a></li>
+                <li><a href="royal-club.php">Royal Club</a></li>
+                <li><a href="menu.php">Menu</a></li>
+                <li><a href="our-story.php">Our Story</a></li>
+                <li><a href="join-team.php">Join Our Team</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
 
             <!-- ORDER BUTTON -->

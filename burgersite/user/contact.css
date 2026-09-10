@@ -1,0 +1,1014 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+
+    --red: #9d1118;
+    --dark-red: #65090e;
+
+    --gold: #d9a83e;
+
+    --cream: #f5ead5;
+
+    --black: #11100f;
+
+    --white: #fffaf0;
+
+    --gray: #686158;
+
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+
+    background: var(--cream);
+
+    color: var(--black);
+
+    line-height: 1.6;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+
+    height: 78px;
+
+    padding: 0 7%;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+
+.logo {
+
+    font-family: 'Anton', sans-serif;
+
+    font-size: 24px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.logo span {
+
+    color: var(--gold);
+
+}
+
+
+nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+}
+
+
+nav a {
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    transition: .3s;
+
+}
+
+
+nav a:hover,
+nav a.active {
+
+    color: var(--gold);
+
+}
+
+
+.order-btn {
+
+    background: var(--gold);
+
+    color: var(--black);
+
+    padding: 13px 20px;
+
+}
+
+
+.menu-btn {
+
+    display: none;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.contact-hero {
+
+    min-height: 580px;
+
+    padding: 90px 9%;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            var(--dark-red),
+            var(--red)
+        );
+
+    color: white;
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.small-title {
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.contact-hero h1 {
+
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(70px, 10vw, 135px);
+
+    line-height: .85;
+
+}
+
+
+.contact-hero h1 span {
+
+    color: var(--gold);
+
+}
+
+
+.hero-text {
+
+    max-width: 550px;
+
+    margin-top: 30px;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+.hero-crown {
+
+    position: absolute;
+
+    right: 6%;
+
+    bottom: -100px;
+
+    font-size: 430px;
+
+    line-height: 1;
+
+    color: rgba(255,255,255,.07);
+
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+
+    padding: 110px 9%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: start;
+
+}
+
+
+.contact-info h2 {
+
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(55px, 6vw, 85px);
+
+    line-height: .88;
+
+    margin-bottom: 30px;
+
+}
+
+
+.contact-info h2 span {
+
+    color: var(--red);
+
+}
+
+
+.info-text {
+
+    max-width: 600px;
+
+    color: var(--gray);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 40px;
+
+}
+
+
+/* =========================
+   CONTACT INFORMATION
+========================= */
+
+.info-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+
+.info-item {
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: flex-start;
+
+}
+
+
+.info-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    background: var(--red);
+
+    color: var(--gold);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 20px;
+
+}
+
+
+.info-item h3 {
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.info-item p {
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact-form-box {
+
+    background: var(--black);
+
+    color: white;
+
+    padding: 45px;
+
+    border-top: 5px solid var(--gold);
+
+    box-shadow: 18px 18px 0 var(--gold);
+
+}
+
+
+.form-title {
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.form-group {
+
+    margin-bottom: 22px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+
+    color: var(--gold);
+
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 14px;
+
+    background: #1d1b19;
+
+    border: 1px solid #ffffff20;
+
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+
+    outline: none;
+
+    font-size: 13px;
+
+    transition: .3s;
+
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: var(--gold);
+
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #777;
+
+}
+
+
+.form-group select option {
+
+    background: var(--black);
+
+}
+
+
+.submit-btn {
+
+    width: 100%;
+
+    border: none;
+
+    padding: 16px;
+
+    background: var(--gold);
+
+    color: var(--black);
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.submit-btn:hover {
+
+    background: #e6b84d;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================
+   ROYAL CLUB CTA
+========================= */
+
+.club-contact {
+
+    padding: 110px 10%;
+
+    background:
+        linear-gradient(
+            120deg,
+            var(--red),
+            var(--dark-red)
+        );
+
+    color: white;
+
+}
+
+
+.club-contact h2 {
+
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(55px, 7vw, 95px);
+
+    line-height: .88;
+
+    margin-bottom: 30px;
+
+}
+
+
+.club-contact h2 span {
+
+    color: var(--gold);
+
+}
+
+
+.club-contact p:not(.small-title) {
+
+    max-width: 600px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq-section {
+
+    padding: 110px 9%;
+
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+
+}
+
+
+.section-heading h2 {
+
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(50px, 6vw, 80px);
+
+    line-height: .9;
+
+}
+
+
+.section-heading h2 span {
+
+    color: var(--red);
+
+}
+
+
+.faq-container {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+.faq-item {
+
+    border-bottom: 1px solid #0002;
+
+}
+
+
+.faq-question {
+
+    width: 100%;
+
+    padding: 22px 0;
+
+    background: transparent;
+
+    border: none;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    text-align: left;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    color: var(--black);
+
+}
+
+
+.faq-question span {
+
+    color: var(--red);
+
+    font-size: 25px;
+
+    transition: .3s;
+
+}
+
+
+.faq-answer {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: max-height .4s ease;
+
+}
+
+
+.faq-answer p {
+
+    padding: 0 30px 22px 0;
+
+    color: var(--gray);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+.faq-item.open
+.faq-answer {
+
+    max-height: 200px;
+
+}
+
+
+.faq-item.open
+.faq-question span {
+
+    transform: rotate(45deg);
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #0b0a09;
+
+    color: #aaa39a;
+
+    padding: 70px 8% 25px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 40px;
+
+}
+
+
+footer h4 {
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+
+}
+
+
+footer a {
+
+    display: block;
+
+    font-size: 12px;
+
+    margin-bottom: 10px;
+
+}
+
+
+footer a:hover {
+
+    color: var(--gold);
+
+}
+
+
+.footer-brand p {
+
+    margin-top: 12px;
+
+    font-size: 13px;
+
+}
+
+
+.copyright {
+
+    grid-column: 1 / -1;
+
+    padding-top: 25px;
+
+    border-top: 1px solid #ffffff15;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================
+   NOTIFICATION
+========================= */
+
+.notification {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    background: var(--gold);
+
+    color: var(--black);
+
+    padding: 15px 22px;
+
+    font-weight: 700;
+
+    box-shadow: 0 8px 25px #0004;
+
+    transform: translateY(120px);
+
+    transition: .4s;
+
+    z-index: 200;
+
+}
+
+
+.notification.show {
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+
+        gap: 14px;
+
+    }
+
+
+    nav a {
+
+        font-size: 9px;
+
+    }
+
+
+    .contact-section {
+
+        gap: 50px;
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+
+        height: 70px;
+
+    }
+
+
+    .menu-btn {
+
+        display: block;
+
+    }
+
+
+    nav {
+
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        background: var(--black);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+    }
+
+
+    nav.open {
+
+        display: flex;
+
+    }
+
+
+    .contact-hero {
+
+        min-height: 550px;
+
+        padding: 70px 7%;
+
+    }
+
+
+    .contact-hero h1 {
+
+        font-size: 70px;
+
+    }
+
+
+    .hero-crown {
+
+        font-size: 250px;
+
+        right: -20px;
+
+    }
+
+
+    .contact-section {
+
+        grid-template-columns: 1fr;
+
+        padding: 80px 7%;
+
+    }
+
+
+    .contact-form-box {
+
+        padding: 30px;
+
+        box-shadow: 10px 10px 0 var(--gold);
+
+    }
+
+
+    .club-contact {
+
+        padding: 80px 7%;
+
+    }
+
+
+    .faq-section {
+
+        padding: 80px 7%;
+
+    }
+
+
+    footer {
+
+        grid-template-columns: 1fr 1fr;
+
+        padding: 60px 7%;
+
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 450px) {
+
+    .contact-hero h1 {
+
+        font-size: 55px;
+
+    }
+
+
+    footer {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .copyright {
+
+        grid-column: auto;
+
+    }
+
+}
